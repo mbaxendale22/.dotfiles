@@ -1,6 +1,7 @@
--- require'lspconfig'.gopls.setuo{}
 
 require("bax.set")
 require("bax.remap")
+require("bax.lsp_config")
 
-print("hello world from inside the bax folder")
+--require'lspconfig'.pyright.setup{}
+
