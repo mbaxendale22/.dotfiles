@@ -1,11 +1,9 @@
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-require'lspconfig'.pyright.setup{
 
-    capabilities = capabilities,
+local on_attach = function(client)
     -- runs when server is attached to a buffer
-    on_attach = function(client)
      -- keymap "[mode]" "[remap key]", [command], last options sets it to current buffer only (not setting a global keymap)
      vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer = 0})
@@ -15,9 +13,8 @@ require'lspconfig'.pyright.setup{
      vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, {buffer = 0})
      vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer = 0})
 
-    end,
+    end
 
-}
 
 -- config for cmp
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
@@ -45,12 +42,33 @@ vim.opt.completeopt = {"menu", "menuone", "noselect"}
     })
   })
 
-  -- Set configuration for specific filetype.
---  cmp.setup.filetype('gitcommit', {
-  --  sources = cmp.config.sources({
-    --  { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
-   -- }, {
-     -- { name = 'buffer' },
-   -- })
- -- })
+require'lspconfig'.pyright.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+}
 
+require'lspconfig'.sumneko_lua.setup{
+    capabilities = capabilities,
+--	cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+	settings = {
+		Lua = {
+			runtime = {
+				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+				version = "LuaJIT",
+				-- Setup your lua path
+				path = vim.split(package.path, ";"),
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = { "vim" },
+			},
+			workspace = {
+				-- Make the server aware of Neovim runtime files
+				library = {
+					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+					[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+				},
+			},
+		},
+	},
+}
