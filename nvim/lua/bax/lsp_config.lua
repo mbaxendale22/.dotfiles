@@ -72,3 +72,8 @@ require'lspconfig'.sumneko_lua.setup{
 		},
 	},
 }
+
+require'lspconfig'.tsserver.setup{
+    capabilities = capabilities,
+    on_attach = on_attach,
+}

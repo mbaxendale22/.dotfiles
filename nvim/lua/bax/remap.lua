@@ -2,7 +2,14 @@ local Remap = require("bax.keymap")
 
 local inoremap = Remap.inoremap
 local nnoremap = Remap.nnoremap
--- first part is keys you want to map to, prefixed by leader key 
+-- first part is keys you want to map to, prefixed by leader key
 -- second part is command you want to map
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
-inoremap("jk", "<Esc>") 
+nnoremap("<leader>pp", "<cmd>Ex<CR>")
+nnoremap("<leader>pn", "<cmd>Vexplore<CR>")
+inoremap("<C-j>", "<Esc>")
+
+-- telescope remaps
+nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
+nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
+nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
+nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>")
