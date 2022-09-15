@@ -12,8 +12,10 @@ local on_attach = function(client)
      vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {buffer = 0})
      vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, {buffer = 0})
      vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer = 0})
-     vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+     vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {buffer = 0})
 
+     --format on save
+     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
     end
 
 
