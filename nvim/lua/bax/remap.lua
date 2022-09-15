@@ -6,10 +6,16 @@ local nnoremap = Remap.nnoremap
 -- second part is command you want to map
 nnoremap("<leader>pp", "<cmd>Ex<CR>")
 nnoremap("<leader>pn", "<cmd>Vexplore<CR>")
-inoremap("<C-j>", "<Esc>")
+inoremap("jk", "<Esc>")
 
 -- telescope remaps
 nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+inoremap("(", "()<Left>")
+inoremap("[", "[]<Left>")
+inoremap("{", "{}<Left>")
+inoremap("'", "''<Left>")
+inoremap('"', '""<Left>')
