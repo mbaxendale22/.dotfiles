@@ -45,4 +45,11 @@ return require('packer').startup(function(use)
 
   -- put marks in the sidebar
   use 'kshenoy/vim-signature'
+
+  -- formatting, linting, and code actions
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  use { "williamboman/mason.nvim" }
   end)
