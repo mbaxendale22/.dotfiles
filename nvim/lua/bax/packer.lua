@@ -8,7 +8,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- colorscheme
   use 'folke/tokyonight.nvim'
+   use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
 
+  use {'EdenEast/nightfox.nvim'}
   -- built in nvim lsp set up
   use 'neovim/nvim-lspconfig'
 
@@ -46,13 +51,14 @@ return require('packer').startup(function(use)
   -- put marks in the sidebar
   use 'kshenoy/vim-signature'
 
-  -- formatting, linting, and code actions
-  use 'jose-elias-alvarez/null-ls.nvim'
-
   use 'jose-elias-alvarez/null-ls.nvim'
 
   use { "williamboman/mason.nvim" }
 
+  -- UI for LSP
   use {"glepnir/lspsaga.nvim"}
 
+  use {"ThePrimeagen/harpoon"}
+
   end)
+

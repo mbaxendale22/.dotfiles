@@ -1,3 +1,4 @@
+
 local ls = require("luasnip") --{{{
 local s = ls.s
 local i = ls.i
@@ -82,44 +83,6 @@ end --}}}
     }))
 
     table.insert(snippets, consoleLog)
-    local ternary = s("trn", fmt([[
-    const {} = {} ? {} : {} 
-    ]],
-    {
-        i(1, "varName"),
-        i(2, "condition"),
-        i(3, "if_true"),
-        i(4, "if_false"),
-    }))
-
-    table.insert(snippets, ternary)
-
-    local func = s("func", fmt([[
-    function {} ({}){{
-        {}
-    }} 
-    ]],
-    {
-        i(1, "name"),
-        i(2, "params"),
-        i(3, "body"),
-    }))
-
-    table.insert(snippets, func)
-
-    local afunc = s("afunc", fmt([[
-    const {} = ({}) => {{
-        return {}
-    }} 
-    ]],
-    {
-        i(1, "name"),
-        i(2, "params"),
-        i(3, "body"),
-    }))
-
-    table.insert(snippets, afunc)
-
 
 -- End Refactoring --
 

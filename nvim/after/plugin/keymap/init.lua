@@ -5,8 +5,8 @@ local nnoremap = Remap.nnoremap
 local vnoremap = Remap.vnoremap
 -- first part is keys you want to map to, prefixed by leader key
 -- second part is command you want to map
-nnoremap("<leader>pp", "<cmd>Ex<CR>")
-nnoremap("<leader>pn", "<cmd>Vexplore<CR>")
+nnoremap("<leader>pq", "<cmd>Ex<CR>")
+nnoremap("<leader>ps", "<cmd>Vexplore<CR>")
 inoremap("jk", "<Esc>")
 
 nnoremap("<leader>vs", "<cmd>vsp<CR>")

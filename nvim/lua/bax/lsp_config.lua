@@ -5,7 +5,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 local on_attach = function(client)
     -- runs when server is attached to a buffer
      -- keymap "[mode]" "[remap key]", [command], last options sets it to current buffer only (not setting a global keymap)
-     vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
+     --vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer = 0})
      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {buffer = 0})
      vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, {buffer = 0})
      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {buffer = 0})
@@ -14,8 +14,8 @@ local on_attach = function(client)
      vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, {buffer = 0})
      vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {buffer = 0})
 
-     --format on save
-     vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+               --format on save
+    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
     end
 
 
