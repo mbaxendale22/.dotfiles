@@ -8,5 +8,6 @@ require("bax.mason")
 require("bax.luasnip")
 require("bax.icons")
 require("bax.lspsaga")
+require("bax.comment")
 
 

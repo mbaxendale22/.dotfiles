@@ -60,5 +60,8 @@ return require('packer').startup(function(use)
 
   use {"ThePrimeagen/harpoon"}
 
+  -- comment in/out with gc 
+  use {"numToStr/Comment.nvim"}
+
   end)
 
