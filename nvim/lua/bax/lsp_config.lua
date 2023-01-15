@@ -1,6 +1,6 @@
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
+require("luasnip.loaders.from_lua").load({paths =  "~/.config/nvim/after/plugin/snippets"})
 
 local on_attach = function(client)
     -- runs when server is attached to a buffer

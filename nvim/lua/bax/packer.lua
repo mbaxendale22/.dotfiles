@@ -56,7 +56,13 @@ return require('packer').startup(function(use)
   use { "williamboman/mason.nvim" }
 
   -- UI for LSP
-  use {"glepnir/lspsaga.nvim"}
+  use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+          require("lspsaga").setup({})
+      end,
+  })
 
   use {"ThePrimeagen/harpoon"}
 

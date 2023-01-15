@@ -68,6 +68,7 @@ local function cs(trigger, nodes, opts) --{{{
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
 end --}}}
 
+
 -- Start Refactoring --
 
     local my_first_snippet = s("myFirstSnippet", {

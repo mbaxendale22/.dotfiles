@@ -1,5 +1,4 @@
 
-
 local ls = require("luasnip") --{{{
 local s = ls.s
 local i = ls.i
@@ -16,7 +15,7 @@ local rep = require("luasnip.extras").rep
 local snippets, autosnippets = {}, {} --}}}
 
 local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern =  "*.ts"
+local file_pattern =  "*.tsx"
 
 local function cs(trigger, nodes, opts) --{{{
 	local snippet = s(trigger, nodes)
@@ -70,7 +69,7 @@ local function cs(trigger, nodes, opts) --{{{
 	table.insert(target_table, snippet) -- insert snippet into appropriate table
 end --}}}
 
--- Start Snippets --
+-- Start Refactoring --
 
 -- CONSOLE LOG --{{{
      local consoleLog = s("clg", fmt([[
@@ -135,7 +134,6 @@ end --}}}
 
     }}
 
-
     export const {} = (props: Props) => {{
 
         const {{}} = Props
@@ -156,24 +154,6 @@ end --}}}
 
 
     table.insert(snippets, react_native) --}}}
-
-    --MAP -- {{{
-    local map = s("map", fmt([[
-
-    const {} = {}.map(({}) => {})
-
-    ]],
-    {
-        -- each of these nodes corresponds to an empty table in the format string in [[]]
-        -- to escape {} use double ie., {{}}
-        i(1, "varName"),
-        i(2, "array"),
-        i(3, "element"),
-        i(4, "body"),
-    }))
-
-
-    table.insert(snippets, map) --}}}
 
     --FILTER -- {{{
     local filter = s("filter", fmt([[
@@ -196,7 +176,6 @@ end --}}}
     --USE EFFECT -- {{{
     local use_effect = s("useEffect", fmt([[
 
-
     useEffect(() => {{
     
         {}
@@ -211,27 +190,9 @@ end --}}}
         i(2, "dependencies"),
     }))
 
+
     table.insert(snippets, use_effect) --}}}
 
-    --USE STATE -- {{{
-    local useState = s("useState", fmt([[
-
-    const [{}, set{}] = useState({})
-
-    ]],
-    {
-        -- each of these nodes corresponds to an empty table in the format string in [[]]
-        -- to escape {} use double ie., {{}}
-        i(1, "state"),
-        i(2, "state"),
-        i(3, "init"),
-    }))
-
-
-    table.insert(snippets, useState) --}}}
--- End Snippets --
+-- End Refactoring --
 
 return snippets, autosnippets
-
-
-
