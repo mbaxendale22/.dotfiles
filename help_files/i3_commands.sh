@@ -13,7 +13,7 @@ echo ""
 
 echo "***** WINDOWS *****"
 echo "MOD + Shift 0-9" - move window to workspace
-echo "MOD + Shift + q" - kill window
+echo "MOD + Shift + x" - kill window
 echo "MOD j, k, l, ;" - change focus
 echo "MOD + Shift + j, k, l, ;" - move windows
 echo "MOD + Space" - toggle focus mode
