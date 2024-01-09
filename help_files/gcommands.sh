@@ -1,0 +1,27 @@
+echo ""
+echo "***** BASICS *****"
+echo "git clone"
+echo "git add; git commit -m ''; git push"
+echo "git log; git log --oneline"
+echo "git status"
+echo ""
+echo ""
+
+
+echo "***** DIFF *****"
+echo "git diff"
+echo "git diff [first-branch] [second-branch]"
+echo "git diff --staged"
+echo "git diff"
+echo "git restore [file or dir]; git reset"
+echo ""
+
+echo "***** BRANCHES *****"
+echo "git branch"
+echo "git branch [new branch name]"
+echo "git branch -d [branch to delete]"
+echo "git checkout [branch to checkout]"
+echo "git checkout -b [branch to create & checkout]"
+echo "git stash; git stash pop; git stash list"
+echo ""
+

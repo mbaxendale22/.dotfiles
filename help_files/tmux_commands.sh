@@ -1,6 +1,3 @@
-
-echo ""
-echo ""
 echo "prefix = ctrl + s"
 echo ""
 echo ""
