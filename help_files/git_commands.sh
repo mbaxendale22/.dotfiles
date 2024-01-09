@@ -5,8 +5,6 @@ echo "git add; git commit -m ''; git push"
 echo "git log; git log --oneline"
 echo "git status"
 echo ""
-echo ""
-
 
 echo "***** DIFF *****"
 echo "git diff"
