@@ -21,6 +21,10 @@ Install packages using:
 ```
 :PackerSync <CR> 
 ```
+## New Lazy.nvim Config
+
+No additional install required. Just use the config files and lazy
+will handle the installs for you.
 
 ## Telescope
 
@@ -38,17 +42,19 @@ brew install fd
 
 - [sharkdp/fd](https://github.com/sharkdp/fd)
 
-## Keymaps
 
-All custom keymaps can be found in
-```
-nvim/after/plugin/kemap 
-```
+## Tmux
 
-Except for LSP specific keymaps (go to defintition etc.,)
-```
-nvim/bax/lsp_config.lua
-```
-
-
+Tmux config uses TPM (plugin manager). Install with:
  
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+full details here:
+- [TPM](https://github.com/tmux-plugins/tpm)
+
+## AOB
+
+### Fonts
+To see icons and ligs you'll need a [nerd font](https://www.nerdfonts.com/). 
+Currently using Jetbrains Mono. Download and install on your system.
