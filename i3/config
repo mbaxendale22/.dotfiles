@@ -192,6 +192,12 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
+
+# set rofi to replace d-menu
 bindsym $mod+d exec rofi -show run 
+
+# use FEH to set wallpaper on start up
 exec_always feh --bg-scale ~/Pictures/test-wallpaper.jpg
+
+# Start compton (for window fading etc)
 exec --no-startup-id compton -f

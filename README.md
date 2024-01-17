@@ -1,5 +1,4 @@
-# NEOVIM INSTALL GUIDE
-
+# DOTFILES GUIDE
 
 ## Plugin Manager - Packer
 
@@ -53,7 +52,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 full details here:
 - [TPM](https://github.com/tmux-plugins/tpm)
 
-## AOB
+## Linux Config
+
+Nvim config will work for ubuntu. Additional config files include
+- ROFI (drop in replacement for D-menu)
+- i3 (window manager)
+- i3Blocks (config for i3 status bar)
+- compton (renderer)
 
 ### Fonts
 To see icons and ligs you'll need a [nerd font](https://www.nerdfonts.com/). 
