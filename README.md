@@ -59,6 +59,7 @@ Nvim config will work for ubuntu. Additional config files include
 - i3 (window manager)
 - i3Blocks (config for i3 status bar)
 - compton (renderer)
+- .Xresources-i3 (config file used by i3 for display scaling, opacity etc. Place in home dir)
 
 ### Fonts
 To see icons and ligs you'll need a [nerd font](https://www.nerdfonts.com/). 
