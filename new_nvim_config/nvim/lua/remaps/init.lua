@@ -1,0 +1,5 @@
+require("remaps.core")
+require("remaps.regex")
+require("remaps.quotes")
+require("remaps.navigation")
+require("remaps.snippet-style")
