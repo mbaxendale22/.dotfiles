@@ -28,3 +28,5 @@ vim.api.nvim_set_keymap("n", "vaq", [[<Cmd>lua ChangeQuotes("va'", 'va"')<CR>]],
 vim.api.nvim_set_keymap("n", "diq", [[<Cmd>lua ChangeQuotes("di'", 'di"')<CR>]], {})
 vim.api.nvim_set_keymap("n", "daq", [[<Cmd>lua ChangeQuotes("da'", 'da"')<CR>]], {})
 
+vim.api.nvim_set_keymap("n", "yiq", [[<Cmd>lua ChangeQuotes("yi'", 'yi"')<CR>]], {})
+vim.api.nvim_set_keymap("n", "yaq", [[<Cmd>lua ChangeQuotes("ya'", 'ya"')<CR>]], {})
